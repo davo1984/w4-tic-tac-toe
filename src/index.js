@@ -15,9 +15,32 @@ class Square extends React.Component {
 }
 
 class Board extends React.Component {
+    constructor(props) {
+        super(props);
 
-    renderSquare(i) {
-        return <Square />;
+        renderSquare(i) {
+            return <Square />;
+    }
+    
+    function buildRows(props) {
+        const numbers = props.numbers;
+        const listItems = numbers.map((number) =>
+            <li>{number}</li>
+        );
+        return (
+            <ul>{rows}</ul>
+        );
+    }
+
+    function buildcolumns(props) {
+        const numbers = props.numbers;
+        const listItems = numbers.map((number) =>
+
+            <li>{buildcolumns()}</li>
+        );
+        return (
+            <ul>{listItems}</ul>
+        );
     }
 
     render() {
